@@ -25,8 +25,8 @@ const BudgetChart = () => {
     cutout: "70%",
     plugins: {
       legend: {
-        position: "bottom",
-        align: "center",
+        position: "bottom" as const,
+        align: "center" as const,
         labels: {
           boxWidth: 12,
           useBorderRadius: true,
@@ -43,7 +43,7 @@ const BudgetChart = () => {
           size: 14,
           weight: 'bold',
         },
-        formatter: (value) => `${value}%`,
+        formatter: (value: number) => `${value}%`,
       },
     },
   };
