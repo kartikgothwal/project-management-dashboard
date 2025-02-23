@@ -3,7 +3,6 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
-// Register required components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const BudgetChart = () => {
@@ -14,8 +13,8 @@ const BudgetChart = () => {
         label: "Budget",
         data: [19, 33, 48],
         backgroundColor: ["red", "blue", "cyan"],
-        borderWidth: 0, // Remove the white border
-        hoverOffset: 5, // Add small spacing on hover
+        borderWidth: 0,
+        hoverOffset: 5,
       },
     ],
   };
@@ -26,16 +25,16 @@ const BudgetChart = () => {
     cutout: "70%",
     plugins: {
       legend: {
-        position: "bottom" as const, // Display legend at the bottom
+        position: "bottom" as const,
         align: "center" as const,
         labels: {
-          boxWidth: 12, // Reduce box width
-          useBorderRadius: true, // Use rounded boxes
-          borderRadius: 6, // Apply border radius to boxes
+          boxWidth: 12,
+          useBorderRadius: true,
+          borderRadius: 6,
         },
       },
       tooltip: {
-        enabled: true, // Enable tooltips
+        enabled: true,
       },
     },
   };
@@ -43,7 +42,6 @@ const BudgetChart = () => {
   return (
     <div className="relative h-full w-full">
       <Doughnut data={data} options={options} />
-      {/* Add Total Projects and Percentage Texts */}
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="text-lg font-semibold text-gray-700">5</div>
         <div className="text-xs text-gray-500">Total Projects</div>
