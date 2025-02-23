@@ -3,7 +3,16 @@ import React from "react";
 import Image from "next/image";
 import { ClientLogo } from "@/asset";
 
-const ProjectCard = ({ project }) => {
+interface Project {
+  name: string;
+  client: string;
+  budget: number;
+  profitability: number;
+  actualHours: number;
+  soldHours: number;
+}
+
+const ProjectCard = ({ project }: { project: Project }) => {
   let progressBarColor = "bg-green-500";
   let TextColor = "text-gray-500 ";
   if (project.profitability < 0) {
