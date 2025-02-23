@@ -6,6 +6,7 @@ import GraphStats from "@/components/GraphStats";
 import TeamMood from "@/components/TeamMood";
 import Card from "@/components/Layout/Card";
 import ProjectDashboard from "@/components/ProjectDashboard";
+import Footer from "@/components/Layout/Footer";
 
 const AppLayout = () => {
   return (
@@ -17,12 +18,13 @@ const AppLayout = () => {
           <GraphStats />
         </div>
         <div className="lg:col-span-1 space-y-4">
-          <Card title="Team Mood" className="h-full">
+          <Card title="Team Mood" className="h-[95%]">
             <TeamMood />
           </Card>
         </div>
       </div>
       <ProjectDashboard />
+      <Footer />
     </div>
   );
 };

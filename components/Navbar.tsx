@@ -1,4 +1,3 @@
-// components/Navbar.js
 import { ProfilePicture } from "@/asset";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,19 +9,19 @@ const Navbar = () => {
     <nav className="bg-gray-900 text-white p-4 flex justify-between items-center px-3">
       <div className="text-2xl font-bold">HOURS</div>
       <div className="flex space-x-6">
-        <Link href="/dashboard" className="hover:text-gray-400">
+        <Link href="/dashboard" className="hover:text-gray-400 hover:underline">
           Dashboard
         </Link>
-        <Link href="/projects" className="hover:text-gray-400">
+        <Link href="/projects" className="hover:text-gray-400 hover:underline">
           Projects
         </Link>
-        <Link href="/team" className="hover:text-gray-400">
+        <Link href="/team" className="hover:text-gray-400 hover:underline">
           Team
         </Link>
-        <Link href="/clients" className="hover:text-gray-400">
+        <Link href="/clients" className="hover:text-gray-400 hover:underline">
           Clients
         </Link>
-        <Link href="/reports" className="hover:text-gray-400">
+        <Link href="/reports" className="hover:text-gray-400 hover:underline">
           Reports
         </Link>
       </div>

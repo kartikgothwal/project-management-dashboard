@@ -25,8 +25,8 @@ const BudgetChart = () => {
     cutout: "70%",
     plugins: {
       legend: {
-        position: "bottom" as const,
-        align: "center" as const,
+        position: "bottom",
+        align: "center",
         labels: {
           boxWidth: 12,
           useBorderRadius: true,
@@ -35,6 +35,15 @@ const BudgetChart = () => {
       },
       tooltip: {
         enabled: true,
+      },
+      datalabels: {
+        display: true,
+        color: 'white',
+        font: {
+          size: 14,
+          weight: 'bold',
+        },
+        formatter: (value) => `${value}%`,
       },
     },
   };

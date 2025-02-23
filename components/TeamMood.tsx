@@ -31,7 +31,6 @@ const TeamMood = () => {
     <div className="bg-white  rounded-lg p-4 w-full">
       {teamMembers.map((member, index) => (
         <div key={index} className="border-b pb-4 last:border-none">
-          {/* Member Info */}
           <div className="flex items-center gap-4">
             <Image
               height={100}
@@ -46,9 +45,7 @@ const TeamMood = () => {
             </div>
           </div>
 
-          {/* Mood Selector */}
           <div className="relative w-full mt-4">
-            {/* Emoji Indicator */}
             <span
               className="absolute  transform text-2xl transition-all duration-300"
               style={{
@@ -59,7 +56,6 @@ const TeamMood = () => {
               {emojiMood[member.mood]}
             </span>
 
-            {/* Range Input */}
             <input
               type="range"
               min="0"
